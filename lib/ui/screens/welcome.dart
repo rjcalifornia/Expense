@@ -52,7 +52,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   fontSize: 14),
             ),
             const SizedBox(
-              height: 6,
+              height: 7,
             ),
             SizedBox(
               width: 386,
