@@ -1,6 +1,7 @@
 import 'package:expense/ui/screens/home.dart';
 import 'package:expense/ui/screens/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -8,8 +9,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
 
-  WindowManager.instance.setMinimumSize(const Size(1280, 720));
-  WindowManager.instance.setMaximumSize(const Size(1280, 720));
+  WindowManager.instance.setMinimumSize(const Size(1280, 800));
+  WindowManager.instance.setMaximumSize(const Size(1280, 800));
   runApp(const ExpenseApp());
 }
 
@@ -44,9 +45,9 @@ class _ExpenseAppState extends State<ExpenseApp> {
       debugShowCheckedModeBanner: false,
       title: 'Expense',
       theme: ThemeData(
-        dividerColor: Colors.transparent,
-        scaffoldBackgroundColor: const Color(0xfffafafa),
-      ),
+          dividerColor: Colors.transparent,
+          scaffoldBackgroundColor: const Color(0xfffafafa),
+          textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme)),
       home: FutureBuilder(
           future: verifyWelcome,
           builder: (context, snapshot) {
