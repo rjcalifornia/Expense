@@ -24,33 +24,35 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             Center(
               child: SizedBox(
-                width: 350,
+                width: 360,
                 child: Image.asset("images/mobile-app-development.png"),
               ),
             ),
             const SizedBox(
-              height: 38,
+              height: 36,
             ),
             const Text("The easiest approach to",
                 style: TextStyle(
                     color: Color(0xff26272A),
                     fontSize: 24,
-                    fontWeight: FontWeight.w500)),
+                    fontWeight: FontWeight.normal)),
             const Text("handle your finances",
                 style: TextStyle(
                     color: Color(0xff26272A),
                     fontSize: 24,
-                    fontWeight: FontWeight.w500)),
+                    fontWeight: FontWeight.normal)),
             const SizedBox(
-              height: 26,
+              height: 24,
             ),
             const Text(
               "Your money. Your goals. Your way.",
               style: TextStyle(
-                  color: ExpenseColors.infoSmall, fontWeight: FontWeight.w500),
+                  color: ExpenseColors.infoSmall,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14),
             ),
             const SizedBox(
-              height: 12,
+              height: 6,
             ),
             SizedBox(
               width: 386,
@@ -61,7 +63,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   backgroundColor: ExpenseColors.brand,
                 ),
                 child: const Text(
-                  "Get started",
+                  "Get Started",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -89,7 +91,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Text(
                 license_2,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: ExpenseColors.infoSmall, fontSize: 10),
+                style: const TextStyle(
+                    color: ExpenseColors.infoSmall, fontSize: 10),
               ),
             )
           ],
