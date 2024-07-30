@@ -58,7 +58,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               width: 386,
               height: 48,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil('app', (route) => false);
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: ExpenseColors.brand,
                 ),

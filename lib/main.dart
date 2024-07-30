@@ -9,8 +9,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
 
-  WindowManager.instance.setMinimumSize(const Size(1280, 800));
-  WindowManager.instance.setMaximumSize(const Size(1280, 800));
+  WindowManager.instance.setMinimumSize(const Size(1300, 850));
+  WindowManager.instance.setMaximumSize(const Size(1300, 850));
   runApp(const ExpenseApp());
 }
 
@@ -53,7 +53,7 @@ class _ExpenseAppState extends State<ExpenseApp> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               if (snapshot.data != null && snapshot.data!)
-                return HomeScreen();
+                return AppScreen();
               else
                 return WelcomeScreen();
             } else {
@@ -64,6 +64,7 @@ class _ExpenseAppState extends State<ExpenseApp> {
               );
             }
           }),
+      routes: {'app': (context) => AppScreen()},
     );
   }
 }
