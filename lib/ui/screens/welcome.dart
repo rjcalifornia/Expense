@@ -1,3 +1,4 @@
+import 'package:expense/global.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -14,10 +15,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Scaffold(
       backgroundColor: const Color(0xfffafafa),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(
+              height: 22,
+            ),
             Center(
               child: SizedBox(
                 width: 350,
@@ -38,13 +42,56 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     fontSize: 24,
                     fontWeight: FontWeight.w500)),
             const SizedBox(
-              height: 16,
+              height: 26,
             ),
             const Text(
               "Your money. Your goals. Your way.",
               style: TextStyle(
-                  color: Color(0xff8D9096), fontWeight: FontWeight.w500),
+                  color: ExpenseColors.infoSmall, fontWeight: FontWeight.w500),
             ),
+            const SizedBox(
+              height: 12,
+            ),
+            SizedBox(
+              width: 386,
+              height: 48,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ExpenseColors.brand,
+                ),
+                child: const Text(
+                  "Get started",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 38,
+            ),
+            SizedBox(
+              width: 380,
+              child: Text(
+                license_1,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    color: ExpenseColors.infoSmall, fontSize: 10),
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            SizedBox(
+              width: 380,
+              child: Text(
+                license_2,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: ExpenseColors.infoSmall, fontSize: 10),
+              ),
+            )
           ],
         ),
       ),
