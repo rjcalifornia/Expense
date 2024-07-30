@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class ExpenseColors {
   static const brand = Color(0xffFF405C);
   static const infoSmall = Color(0xff8D9096);
+  static const mainBackground = Color(0xfffafafa);
+  static const unselected = Color(0xffC5C7CB);
 }
 
 String license_1 =

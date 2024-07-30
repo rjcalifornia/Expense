@@ -1,3 +1,4 @@
+import 'package:expense/global.dart';
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
 
@@ -12,12 +13,14 @@ class _AppScreenState extends State<AppScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffafafa),
+      backgroundColor: ExpenseColors.mainBackground,
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: true,
         showUnselectedLabels: false,
+        selectedItemColor: ExpenseColors.brand,
+        unselectedItemColor: ExpenseColors.unselected,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Symbols.home),
