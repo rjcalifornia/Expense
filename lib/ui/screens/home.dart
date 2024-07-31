@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 3,
-                  height: MediaQuery.of(context).size.height / 4,
+                  height: MediaQuery.of(context).size.height / 3,
                   child: Stack(
                     children: [
                       Positioned.fill(
@@ -54,7 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Center(
                                 child: Container(
-                                  width: MediaQuery.of(context).size.width / 3,
+                                  width:
+                                      MediaQuery.of(context).size.width / 2.8,
                                   padding: EdgeInsets.all(20),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(40.0),
@@ -80,6 +81,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                               ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Align(
+                                  alignment: Alignment.centerRight,
+                                  child: SizedBox(
+                                    width: 186,
+                                    height: 48,
+                                    child: OutlinedButton(
+                                        style: OutlinedButton.styleFrom(
+                                            backgroundColor: Color(0xff2758ED),
+                                            side: BorderSide(
+                                                color: Colors.white,
+                                                width: 1.3)),
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Add income",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w600),
+                                        )),
+                                  ))
                             ],
                           ),
                         ),
