@@ -1,3 +1,4 @@
+import 'package:expense/global.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+      padding: const EdgeInsets.only(top: 28, bottom: 28, left: 40, right: 40),
       child: Row(
         children: [
           Expanded(
@@ -28,7 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40.0),
-                              color: Color(0xC92758ED)),
+                              color:
+                                  ExpenseColors.expenseBlue.withOpacity(0.70)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -56,9 +58,25 @@ class _HomeScreenState extends State<HomeScreen> {
                                   padding: EdgeInsets.all(20),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(40.0),
-                                      color: Color(0xffDADADC)),
+                                      color:
+                                          Color(0xffDADADC).withOpacity(0.25)),
                                   child: Column(
-                                    children: [],
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Balance",
+                                        style: TextStyle(
+                                            color: Color(0xffE6EAFF),
+                                            fontSize: 14),
+                                      ),
+                                      Text(
+                                        '\$50,540.00',
+                                        style: TextStyle(
+                                            fontSize: 30, color: Colors.white),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
