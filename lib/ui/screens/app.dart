@@ -50,30 +50,39 @@ class _AppScreenState extends State<AppScreen> {
               onPressed: () {
                 onItemTapped(0);
               },
-              icon: const Icon(Symbols.home, color: ExpenseColors.selected),
+              icon: Icon(Symbols.home,
+                  color: currentIndex == 0
+                      ? ExpenseColors.selected
+                      : ExpenseColors.unselected),
               tooltip: 'Home',
             ),
             IconButton(
               onPressed: () {
                 onItemTapped(1);
               },
-              icon: const Icon(
+              icon: Icon(
                 Symbols.equalizer,
-                color: ExpenseColors.unselected,
+                color: currentIndex == 1
+                    ? ExpenseColors.selected
+                    : ExpenseColors.unselected,
               ),
               tooltip: 'Reports',
             ),
             //  const Divider(),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Symbols.credit_card,
-                  color: ExpenseColors.unselected),
+              icon: Icon(Symbols.credit_card,
+                  color: currentIndex == 2
+                      ? ExpenseColors.selected
+                      : ExpenseColors.unselected),
               tooltip: 'Transactions',
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Symbols.account_balance,
-                  color: ExpenseColors.unselected),
+              icon: Icon(Symbols.account_balance,
+                  color: currentIndex == 3
+                      ? ExpenseColors.selected
+                      : ExpenseColors.unselected),
               tooltip: 'Loan simulator',
             ),
             // IconButton(
