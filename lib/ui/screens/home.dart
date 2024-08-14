@@ -112,6 +112,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                const SizedBox(
+                  height: 40,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Transactions",
+                      style: TextStyle(
+                          color: Color(0xff323236),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                    ),
+                    Text("View all",
+                        style: TextStyle(
+                            color: Color(0xff83848B),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12))
+                  ],
+                ),
                 const Text("Column 1"),
               ],
             ),
