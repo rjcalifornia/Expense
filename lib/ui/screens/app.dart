@@ -1,6 +1,7 @@
 import 'package:expense/global.dart';
 import 'package:expense/ui/screens/home.dart';
 import 'package:expense/ui/screens/reports.dart';
+import 'package:expense/ui/screens/transactions.dart';
 import 'package:flutter/material.dart';
 
 import 'package:material_symbols_icons/symbols.dart';
@@ -14,7 +15,11 @@ class AppScreen extends StatefulWidget {
 
 class _AppScreenState extends State<AppScreen> {
   int currentIndex = 0;
-  final List<Widget> screens = [const HomeScreen(), const ReportScreen()];
+  final List<Widget> screens = [
+    const HomeScreen(),
+    const ReportScreen(),
+    const TransactionsScreen()
+  ];
 
   void onItemTapped(int index) {
     setState(() {
@@ -70,7 +75,9 @@ class _AppScreenState extends State<AppScreen> {
             ),
             //  const Divider(),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                onItemTapped(2);
+              },
               icon: Icon(Symbols.credit_card,
                   color: currentIndex == 2
                       ? ExpenseColors.selected
