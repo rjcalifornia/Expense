@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Positioned.fill(
                         child: Container(
-                          padding: EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40.0),
                               color:
@@ -35,33 +35,33 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 "Expense",
                                 style: TextStyle(
                                     color: Color(0xffE6EAFF),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14),
                               ),
-                              Text(
+                              const Text(
                                 "Welcome back",
                                 style: TextStyle(
                                     color: Color(0xffDADADC),
                                     fontWeight: FontWeight.w500,
                                     fontSize: 16),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Center(
                                 child: Container(
                                   width:
                                       MediaQuery.of(context).size.width / 2.8,
-                                  padding: EdgeInsets.all(20),
+                                  padding: const EdgeInsets.all(20),
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(40.0),
-                                      color:
-                                          Color(0xffDADADC).withOpacity(0.25)),
-                                  child: Column(
+                                      borderRadius: BorderRadius.circular(20.0),
+                                      color: const Color(0xffDADADC)
+                                          .withOpacity(0.25)),
+                                  child: const Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               Align(
@@ -91,12 +91,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     height: 48,
                                     child: OutlinedButton(
                                         style: OutlinedButton.styleFrom(
-                                            backgroundColor: Color(0xff2758ED),
-                                            side: BorderSide(
+                                            backgroundColor:
+                                                const Color(0xff2758ED),
+                                            side: const BorderSide(
                                                 color: Colors.white,
                                                 width: 1.3)),
                                         onPressed: () {},
-                                        child: Text(
+                                        child: const Text(
                                           "Add income",
                                           style: TextStyle(
                                               color: Colors.white,
@@ -115,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          Expanded(
+          const Expanded(
               child: Column(
             children: [Text("Column 2")],
           ))

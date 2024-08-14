@@ -52,19 +52,20 @@ class _ExpenseAppState extends State<ExpenseApp> {
           future: verifyWelcome,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              if (snapshot.data != null && snapshot.data!)
-                return AppScreen();
-              else
-                return WelcomeScreen();
+              if (snapshot.data != null && snapshot.data!) {
+                return const AppScreen();
+              } else {
+                return const WelcomeScreen();
+              }
             } else {
-              return Scaffold(
+              return const Scaffold(
                 body: Center(
                   child: CircularProgressIndicator(),
                 ),
               );
             }
           }),
-      routes: {'app': (context) => AppScreen()},
+      routes: {'app': (context) => const AppScreen()},
     );
   }
 }
