@@ -16,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Row(
         children: [
           Expanded(
+            flex: 1,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -122,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       "Transactions",
                       style: TextStyle(
                           color: Color(0xff323236),
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
                           fontSize: 16),
                     ),
                     Text("View all",
@@ -137,9 +138,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const Expanded(
+              flex: 2,
               child: Column(
-            children: [Text("Column 2")],
-          ))
+                children: [Text("Column 2")],
+              ))
         ],
       ),
     );
