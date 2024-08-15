@@ -5,6 +5,7 @@ import 'package:expense/ui/screens/transactions.dart';
 import 'package:flutter/material.dart';
 
 import 'package:material_symbols_icons/symbols.dart';
+import 'package:window_manager/window_manager.dart';
 
 class AppScreen extends StatefulWidget {
   const AppScreen({super.key});
@@ -32,6 +33,13 @@ class _AppScreenState extends State<AppScreen> {
     return Scaffold(
       backgroundColor: ExpenseColors.mainBackground,
       body: screens.elementAt(currentIndex),
+      appBar: AppBar(
+        flexibleSpace: GestureDetector(
+          onLongPressDown: (details) {
+            WindowManager.instance.startDragging();
+          },
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: ExpenseColors.brand,
         onPressed: () {},
