@@ -34,11 +34,37 @@ class _AppScreenState extends State<AppScreen> {
       backgroundColor: ExpenseColors.mainBackground,
       body: screens.elementAt(currentIndex),
       appBar: AppBar(
-        flexibleSpace: GestureDetector(
-          onLongPressDown: (details) {
-            WindowManager.instance.startDragging();
-          },
-        ),
+        elevation: 0,
+        backgroundColor: ExpenseColors.mainBackground,
+        actions: [
+          PopupMenuButton(
+              onSelected: (value) {},
+              surfaceTintColor: ExpenseColors.mainBackground,
+              itemBuilder: (BuildContext ctx) {
+                return [
+                  const PopupMenuItem(
+                      child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.settings_outlined,
+                            //color: BrandColors.hof,
+                          ),
+                          SizedBox(
+                            width: 3,
+                          ),
+                          Text(
+                            "Settings",
+                            //style: TextStyle(color: BrandColors.hof),
+                          ),
+                        ],
+                      )
+                    ],
+                  )),
+                ];
+              }),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: ExpenseColors.brand,
