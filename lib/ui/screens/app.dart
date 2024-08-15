@@ -38,7 +38,9 @@ class _AppScreenState extends State<AppScreen> {
         backgroundColor: ExpenseColors.mainBackground,
         actions: [
           PopupMenuButton(
+              offset: const Offset(2, 40),
               onSelected: (value) {},
+              color: ExpenseColors.mainBackground,
               surfaceTintColor: ExpenseColors.mainBackground,
               itemBuilder: (BuildContext ctx) {
                 return [
@@ -57,6 +59,9 @@ class _AppScreenState extends State<AppScreen> {
                           Text(
                             "Settings",
                             //style: TextStyle(color: BrandColors.hof),
+                          ),
+                          SizedBox(
+                            width: 4,
                           ),
                         ],
                       )
