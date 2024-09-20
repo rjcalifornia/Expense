@@ -2,6 +2,7 @@ import 'package:expense/global.dart';
 import 'package:expense/ui/screens/home.dart';
 import 'package:expense/ui/screens/reports.dart';
 import 'package:expense/ui/screens/transactions.dart';
+import 'package:expense/ui/widgets/add_expense_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'package:material_symbols_icons/symbols.dart';
@@ -33,47 +34,49 @@ class _AppScreenState extends State<AppScreen> {
     return Scaffold(
       backgroundColor: ExpenseColors.mainBackground,
       body: screens.elementAt(currentIndex),
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: ExpenseColors.mainBackground,
-        actions: [
-          PopupMenuButton(
-              offset: const Offset(2, 40),
-              onSelected: (value) {},
-              color: ExpenseColors.mainBackground,
-              surfaceTintColor: ExpenseColors.mainBackground,
-              itemBuilder: (BuildContext ctx) {
-                return [
-                  const PopupMenuItem(
-                      child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.settings_outlined,
-                            //color: BrandColors.hof,
-                          ),
-                          SizedBox(
-                            width: 3,
-                          ),
-                          Text(
-                            "Settings",
-                            //style: TextStyle(color: BrandColors.hof),
-                          ),
-                          SizedBox(
-                            width: 4,
-                          ),
-                        ],
-                      )
-                    ],
-                  )),
-                ];
-              }),
-        ],
-      ),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   backgroundColor: ExpenseColors.mainBackground,
+      //   actions: [
+      //     PopupMenuButton(
+      //         offset: const Offset(2, 40),
+      //         onSelected: (value) {},
+      //         color: ExpenseColors.mainBackground,
+      //         surfaceTintColor: ExpenseColors.mainBackground,
+      //         itemBuilder: (BuildContext ctx) {
+      //           return [
+      //             const PopupMenuItem(
+      //                 child: Column(
+      //               children: [
+      //                 Row(
+      //                   children: [
+      //                     Icon(
+      //                       Icons.settings_outlined,
+      //                       //color: BrandColors.hof,
+      //                     ),
+      //                     SizedBox(
+      //                       width: 3,
+      //                     ),
+      //                     Text(
+      //                       "Settings",
+      //                       //style: TextStyle(color: BrandColors.hof),
+      //                     ),
+      //                     SizedBox(
+      //                       width: 4,
+      //                     ),
+      //                   ],
+      //                 )
+      //               ],
+      //             )),
+      //           ];
+      //         }),
+      //   ],
+      // ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: ExpenseColors.brand,
-        onPressed: () {},
+        onPressed: () {
+          addExpense(context);
+        },
         tooltip: 'Add new expense',
         shape: const CircleBorder(),
         elevation: 0,

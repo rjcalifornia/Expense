@@ -7,6 +7,7 @@ class ExpenseColors {
   static const unselected = Color(0xffC5C7CB);
   static const selected = Color(0xff2A64D9);
   static const expenseBlue = Color(0xff2758ED);
+  static const expenseLabels = Color(0xff7d7d7d);
 }
 
 String license_1 =
