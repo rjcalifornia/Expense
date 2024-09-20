@@ -51,6 +51,24 @@ Future<void> addExpense(BuildContext context) {
                 const SizedBox(
                   height: 8,
                 ),
+                TextField(
+                    keyboardType: TextInputType.name,
+                    onChanged: (value) {},
+                    style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    decoration: InputDecoration(
+                      filled: false,
+                      focusColor: const Color(0xffa0a0a0),
+                      hoverColor: const Color(0xffa0a0a0),
+                      fillColor: const Color(0xffF5F5F5),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide:
+                              const BorderSide(color: Color(0xffa0a0a0))),
+                      hintText: "Enter amount",
+                    ))
               ],
             ),
           ),
