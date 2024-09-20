@@ -10,8 +10,6 @@ class ReportScreen extends StatefulWidget {
 class _ReportScreenState extends State<ReportScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Reports"),
-    );
+    return const Text("Reports");
   }
 }

@@ -6,7 +6,6 @@ import 'package:expense/ui/widgets/add_expense_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'package:material_symbols_icons/symbols.dart';
-import 'package:window_manager/window_manager.dart';
 
 class AppScreen extends StatefulWidget {
   const AppScreen({super.key});
@@ -72,19 +71,7 @@ class _AppScreenState extends State<AppScreen> {
       //         }),
       //   ],
       // ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: ExpenseColors.brand,
-        onPressed: () {
-          addExpense(context);
-        },
-        tooltip: 'Add new expense',
-        shape: const CircleBorder(),
-        elevation: 0,
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-      ),
+      floatingActionButton: AddExpenseWidget(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(), surfaceTintColor: Colors.white,
