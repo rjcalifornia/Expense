@@ -19,7 +19,7 @@ class _AddExpenseWidgetState extends State<AddExpenseWidget> {
       onPressed: () {
         showDialog(
             context: context,
-            barrierDismissible: false,
+            barrierDismissible: true,
             builder: (BuildContext context) {
               return StatefulBuilder(
                 builder: (context, setState) {
@@ -29,24 +29,13 @@ class _AddExpenseWidgetState extends State<AddExpenseWidget> {
                     surfaceTintColor: const Color(0xffF5F5F5),
                     content: Container(
                       width: 300,
-                      height: MediaQuery.of(context).size.height / 2,
+                      height: MediaQuery.of(context).size.height / 1.2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: IconButton(
-                                    icon: const Icon(Icons.arrow_back),
-                                    onPressed: () {
-                                      setState(() {
-                                        _value = null;
-                                      });
-                                      Navigator.pop(context);
-                                    }),
-                              ),
                               const Expanded(
                                   child: Center(
                                 child: Text(
@@ -185,6 +174,30 @@ class _AddExpenseWidgetState extends State<AddExpenseWidget> {
                           ),
                           const SizedBox(
                             height: 18,
+                          ),
+                          const Row(
+                            children: [
+                              Text(
+                                "Write note",
+                                style: TextStyle(
+                                    color: ExpenseColors.expenseLabels),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          TextField(
+                            minLines: 6,
+                            keyboardType: TextInputType.multiline,
+                            maxLines: null,
+                            decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: const BorderSide(
+                                        color: Color(0xffa0a0a0))),
+                                filled: false,
+                                hintText: "Enter a note"),
                           ),
                         ],
                       ),
